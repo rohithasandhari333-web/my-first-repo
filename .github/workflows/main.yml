@@ -1,12 +1,12 @@
 name: DevOps Demo
 
-on:
+"on":
   workflow_dispatch:
     inputs:
       example_name:
-        description: "Enter your name"
+        description: Enter your name
         required: true
-        default: "Rohitha"
+        default: Rohitha
 
 env:
   COURSE: DevOps
@@ -28,4 +28,5 @@ jobs:
         run: echo "Course: $COURSE"
 
       - name: Secret
-        run: echo "Secret: ${{ secrets.MY_SECRET }}"
+        run: echo "Secret: ${{ secrets.MY_SECRET }}" 
+
