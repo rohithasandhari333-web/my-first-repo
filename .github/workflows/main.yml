@@ -25,7 +25,7 @@ jobs:
           echo "Runner Architecture: $RUNNER_ARCH"
 
       - name: Course
-        run: 'echo "Course: $COURSE"'
+        run: 'echo "Course:'
 
       - name: Secret
         run: 'echo "Secret: ${{ secrets.MY_SECRET }}" '
