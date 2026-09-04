@@ -20,12 +20,9 @@ jobs:
         run: echo "Hello, ${{ github.event.inputs.example_name }}!"
 
       - name: "Print Course"
-       run: 
-         echo "Course: $COURSE"
-
+        run:  'echo "Course: $COURSE"'
       - name: "Print Secret"
-       run:
-            echo "Secret: ${{ secrets.MY_SECRET }}"
+        run: 'echo"Secret: ${{ secrets.MY_SECRET }}"'
 
       - name: Runner Details
         run: |
