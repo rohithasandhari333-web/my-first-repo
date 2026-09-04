@@ -16,12 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Greeting"
+      - name: Greeting Message
         run: echo "Hello, ${{ github.event.inputs.example_name }}!"
 
-      - name: "Print Course"
-        run:  'echo "Course: $COURSE"'
-      - name: "Print Secret"
+      - name: Print User Input
+        run: 'echo "User Input: ${{ github.event.inputs.example_name }}"'
+
+      - name: Print Environment Variable
+        run: 'echo "Course: $COURSE"'
+
+      - name: Print Secret
         run: 'echo "Secret: ${{ secrets.MY_SECRET }}"'
 
       - name: Runner Details
@@ -29,3 +33,8 @@ jobs:
           echo "Runner OS: $RUNNER_OS"
           echo "Runner Name: $RUNNER_NAME"
           echo "Runner Arch: $RUNNER_ARCH"
+
+      # Bonus Task
+      - name: Run Only for Admin
+        if: github.event.inputs.example_name == 'admin'
+        run: echo "Welcome Admin! This step runs only for admin."
