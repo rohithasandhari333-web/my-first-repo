@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       example_name:
-        description: Enter your name
+        description: "Enter your name"
         required: true
-        default: Rohitha
+        default: "Rohitha"
 
 env:
   COURSE: DevOps
@@ -19,14 +19,14 @@ jobs:
       - name: Greeting
         run: echo "Hello, ${{ github.event.inputs.example_name }}!"
 
+      - name: Print Course
+        run: echo "Course: $COURSE"
+
+      - name: Print Secret
+        run: echo "Secret: ${{ secrets.MY_SECRET }}"
+
       - name: Runner Details
         run: |
           echo "Runner OS: $RUNNER_OS"
-          echo "Runner Architecture: $RUNNER_ARCH"
-
-      - name: Course
-        run: 'echo "Course:'
-
-      - name: Secret
-        run: 'echo "Secret: ${{ secrets.MY_SECRET }}" '
-
+          echo "Runner Name: $RUNNER_NAME"
+          echo "Runner Arch: $RUNNER_ARCH"
