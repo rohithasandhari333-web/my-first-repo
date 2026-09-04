@@ -1,6 +1,6 @@
 name: DevOps Demo
 
-"on":
+on:
   workflow_dispatch:
     inputs:
       example_name:
