@@ -19,11 +19,11 @@ jobs:
       - name: Greeting
         run: echo "Hello, ${{ github.event.inputs.example_name }}!"
 
-      - name: Print Course
+      - name: "Print Course"
        run: 
          echo "Course: $COURSE"
 
-      - name: Print Secret
+      - name: "Print Secret"
        run:
             echo "Secret: ${{ secrets.MY_SECRET }}"
 
