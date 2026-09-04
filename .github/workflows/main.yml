@@ -22,7 +22,7 @@ jobs:
       - name: "Print Course"
         run:  'echo "Course: $COURSE"'
       - name: "Print Secret"
-        run: 'echo" Secret: ${{ secrets.MY_SECRET }}"'
+        run: 'echo "Secret: ${{ secrets.MY_SECRET }}"'
 
       - name: Runner Details
         run: |
