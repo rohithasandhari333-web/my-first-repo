@@ -13,10 +13,9 @@ env:
 
 jobs:
   demo:
-   demo:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
+    steps:
       - name: Greeting
         run: echo "Hello, ${{ github.event.inputs.example_name }}!"
 
